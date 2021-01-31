@@ -101,7 +101,7 @@ inputs:
   # Specify one value (for both width and height) or two values (one for width and one for height)
   config_padding:
     description: Image padding
-    default: 6%
+    default: 10%
   
   # Metrics output format
   config_output:
@@ -145,6 +145,8 @@ inputs:
   use_prebuilt_image:
     description: Use pre-built image from GitHub registry
     default: ""
+  
+  
   # ====================================================================================
   # 📅 Isometric commit calendar
   
