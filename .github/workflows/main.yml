@@ -1,3 +1,163 @@
+# ====================================================================================
+# Inputs and configuration
+
+inputs:
+
+  # ====================================================================================
+  # 🗃️ Base content
+  
+  # Base content
+  base:
+    description: Metrics base content
+    default: header, activity, community, repositories, metadata
+  
+  # Number of repositories to use to computes metrics
+  # Using more will result in more accurate metrics, but you may hit GitHub rate-limit more easily if you use a lot of plugins
+  repositories:
+    description: Number of repositories to use
+    default: 100
+  
+  # Include forked repositories into metrics
+  repositories_forks:
+    description: Include forks in metrics
+    default: no
+  
+  # ====================================================================================
+  # 🧱 Core
+  
+  # User account personal token
+  # No additional scopes are needed unless you want to include private repositories metrics
+  # Some plugins may also require additional scopes
+  # ────────────────────────────────────────────────────────────────
+  # If you're only using plugins which don't really require a GitHub token, you may pass "NOT_NEEDED" as value
+  token:
+    description: GitHub Personal Token
+    required: true
+  
+  # GitHub username
+  user:
+    description: GitHub username
+    default: ""
+  
+  # Set to "${{ secrets.GITHUB_TOKEN }}"
+  committer_token:
+    description: GitHub Token used to commit metrics
+    default: ""
+  
+  # Branch used to commit rendered metrics
+  committer_branch:
+    description: Branch used to commit rendered metrics
+    default: ""
+  
+  # Rendered metrics output path, relative to repository's root
+  filename:
+    description: Rendered metrics output path
+    default: github-metrics.svg
+  
+  # Optimize SVG image to reduce its filesize
+  # Some templates may not support this option
+  optimize:
+    description: SVG optimization
+    default: yes
+  
+  # Setup additional templates from remote repositories
+  setup_community_templates:
+    description: Additional community templates to setup
+    default: ""
+  
+  # Template to use
+  # To use community template, prefix its name with "@"
+  template:
+    description: Template to use
+    default: classic
+  
+  # Additional query parameters (JSON string)
+  # Some templates may require additional parameters which you can specify here
+  # Do not use this option to pass plugins parameters as they'll be overwritten by the other options
+  query:
+    description: Additional query parameters
+    default: "{}"
+  
+  # Timezone used by metrics
+  # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  config_timezone:
+    description: Timezone used
+    default: ""
+  
+  # Specify in which order metrics content will be displayed
+  # If you omit some partials, they'll be appended at the end in default order
+  # See "partials/_.json" of each template for a list of supported partials
+  config_order:
+    description: Configure content order
+    default: ""
+  
+  # Enable SVG CSS animations
+  config_animations:
+    description: SVG CSS animations
+    default: yes
+  
+  # Configure padding for output image (percentage value)
+  # It can be used to add padding to generated metrics if rendering is cropped or has too much empty space
+  # Specify one value (for both width and height) or two values (one for width and one for height)
+  config_padding:
+    description: Image padding
+    default: 6%
+  
+  # Metrics output format
+  config_output:
+    description: Output image format
+    default: svg
+  
+  # Throw on plugins errors
+  # If disabled, metrics will handle errors gracefully with a message in rendered metrics
+  plugins_errors_fatal:
+    description: Die on plugins errors
+    default: no
+  
+  # Debug mode
+  # Note that this will automatically be enabled if job fails
+  debug:
+    description: Debug logs
+    default: no
+  
+  # Ensure SVG can be correctly parsed after generation
+  verify:
+    description: Verify SVG
+    default: no
+  
+  # Debug flags
+  debug_flags:
+    description: Debug flags
+    default: ""
+  
+  # Dry-run mode (perform generation without pushing it)
+  dryrun:
+    description: Enable dry-run
+    default: no
+  
+  # Use mocked data to bypass external APIs
+  use_mocked_data:
+    description: Use mocked data instead of live APIs
+    default: no
+  
+  # Use a pre-built image from GitHub registry (experimental)
+  # See https://github.com/users/lowlighter/packages/container/package/metrics for more information
+  use_prebuilt_image:
+    description: Use pre-built image from GitHub registry
+    default: ""
+  # ====================================================================================
+  # 📅 Isometric commit calendar
+  
+  # Enable or disable plugin
+  plugin_isocalendar:
+    description: Display an isometric view of your commits calendar
+    default: yes
+  
+  # Set time window shown by isometric calendar
+  plugin_isocalendar_duration:
+    description: Set time window shown by isometric calendar
+    default: half-year
+
 name: Metrics
 on:
   # Schedule updates (each hour)
