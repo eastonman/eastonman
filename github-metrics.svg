@@ -1535,7 +1535,7 @@
                                 <div class="title">
                                     <span class="prefix">Super</span>
                                     developer
-                                    <span class="gh">ranked 330k out of 128m users</span>
+                                    <span class="gh">ranked 330k out of 125m users</span>
                                     <div class="value-wrapper">
                                         <div class="value">72</div>
                                     </div>
@@ -1553,7 +1553,7 @@
                                     </defs>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="gauge info">
                                         <circle class="gauge-base" r="25" cx="28" cy="28"/>
-                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="64.37645448323066 155"/>
+                                        <circle class="gauge-arc" transform="rotate(-90 28 28)" r="25" cx="28" cy="28" stroke-dasharray="64.46132785763176 155"/>
                                     </svg>
                                     <svg xmlns="http://www.w3.org/2000/svg" mask="url(#mask)">
                                         <g xmlns="http://www.w3.org/2000/svg" transform="translate(5 4)" fill="none" fill-rule="evenodd">
@@ -1738,7 +1738,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Influencer
-                                    <span class="gh">ranked 95.3k out of 128m users</span>
+                                    <span class="gh">ranked 95.3k out of 125m users</span>
                                     <div class="value-wrapper">
                                         <div class="value">106</div>
                                     </div>
@@ -1859,7 +1859,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Maintainer
-                                    <span class="gh">ranked 238k out of 62.3m repositories</span>
+                                    <span class="gh">ranked 238k out of 62.2m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">155</div>
                                     </div>
@@ -1908,7 +1908,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Inspirer
-                                    <span class="gh">ranked 806k out of 62.3m repositories</span>
+                                    <span class="gh">ranked 806k out of 62.2m repositories</span>
                                     <div class="value-wrapper">
                                         <div class="value">14</div>
                                     </div>
@@ -2115,7 +2115,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 12 Jan 2024, 22:15:03 (timezone Asia/Hong_Kong) with lowlighter/metrics@3.35.0-beta</span>
+                <span>Last updated 12 Jan 2024, 23:15:57 (timezone Asia/Hong_Kong) with lowlighter/metrics@3.35.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
