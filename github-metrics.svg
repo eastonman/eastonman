@@ -406,6 +406,11 @@
                                 <div class="bar" style="width: 18.55596490561738%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
                                 <span class="value">23%</span>
                             </div>
+                            <div class="entry">
+                                <span class="name">Python</span>
+                                <div class="bar" style="width: 1.1120817349690455%; background-color: var(--color-calendar-graph-day-L1-bg)"></div>
+                                <span class="value">1%</span>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -1455,7 +1460,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 17 May 2025, 20:39:31 (timezone Asia/Hong_Kong) with lowlighter/metrics@3.35.0-beta</span>
+                <span>Last updated 17 May 2025, 21:27:00 (timezone Asia/Hong_Kong) with lowlighter/metrics@3.35.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
